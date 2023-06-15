@@ -15,11 +15,11 @@ class TextStatsController {
     }
 
     @PostMapping("/calculate")
-    String calculateStats(@RequestParam String text,
-                          @RequestParam boolean lengthFlag,
-                          @RequestParam boolean wordCountFlag,
-                          @RequestParam boolean palindromeFlag,
-                          @RequestParam boolean mostPopularWordFlag,
+    String calculateStats(@RequestParam(required = false) String text,
+                          @RequestParam(required = false) boolean lengthFlag,
+                          @RequestParam(required = false) boolean wordCountFlag,
+                          @RequestParam(required = false) boolean palindromeFlag,
+                          @RequestParam(required = false) boolean mostPopularWordFlag,
                           Model model) {
         if (text.equals("")) {
             return "error";

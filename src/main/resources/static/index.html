@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Text stats</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="stylesheets/styles.css">
     </head>
     <body>
         <h1>Text statistics</h1>
@@ -13,19 +13,23 @@
             <p>Which statistics would you like to see?</p>
             <div>
                 <label for="length">Text length</label>
-                <input type="checkbox" name="length" id="length">
+                <input type="checkbox" name="lengthFlag" value="true" id="length">
+                <input type="hidden" name="lengthFlag" value="false">
             </div>
             <div>
                 <label for="word-count">Word count</label>
-                <input type="checkbox" name="wordCount" id="word-count">
+                <input type="checkbox" name="wordCountFlag" value="true" id="word-count">
+                <input type="hidden" name="wordCountFlag" value="false">
             </div>
             <div>
                 <label for="palindrome">Check if the text is a palindrome</label>
-                <input type="checkbox" name="palindrome" id="palindrome">
+                <input type="checkbox" name="palindromeFlag" value="true" id="palindrome">
+                <input type="hidden" name="palindromeFlag" value="false">
             </div>
             <div>
                 <label for="most-popular-word">Find the word with largest number of occurences</label>
-                <input type="checkbox" name="mostPopularWord" id="most-popular-word">
+                <input type="checkbox" name="mostPopularWordFlag" value="true" id="most-popular-word">
+                <input type="hidden" name="mostPopularWordFlag" value="false">
             </div>
             <button type="submit">Check statistics</button>
         </form>

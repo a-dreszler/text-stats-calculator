@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Text statistics - results</title>
+        <link rel="stylesheet" href="/successErrorStyles.css">
+    </head>
+    <body>
+        <h1>Statistics of the entered text</h1>
+        <div th:if="${stats.length}">
+            <p th:text="'Text length: ' + ${stats.length}"></p>
+        </div>
+        <div th:if="${stats.wordCount}">
+            <p th:text="'Word count: ' + ${stats.wordCount}"></p>
+        </div>
+        <p th:if="${stats.isPalindrome}">Text is a palindrome</p>
+        <p th:if="${not (stats.isPalindrome eq null and not stats.isPalindrome)}">Text is not a palindrome</p>
+        <div th:if="${stats.mostPopularWord}">
+            <p th:text="${'Most frequent word is ' + ${stats.mostPopularWord} + ', number of occurences: ' + ${stats.mostPopularWordOccurences}}"></p>
+        </div>
+        <p>Entered text</p>
+        <p th:text="${text}"></p>
+    </body>
+</html>

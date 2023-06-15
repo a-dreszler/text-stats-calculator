@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Text stats</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Text statistics</h1>
+        <form action="/calculate" method="post">
+            <label for="text">Enter a text whose statistics you would like to see</label>
+            <textarea name="text" id="text" rows="20"></textarea>
+            <p>Which statistics would you like to see?</p>
+            <div>
+                <label for="length">Text length</label>
+                <input type="checkbox" name="length" id="length">
+            </div>
+            <div>
+                <label for="word-count">Word count</label>
+                <input type="checkbox" name="wordCount" id="word-count">
+            </div>
+            <div>
+                <label for="palindrome">Check if the text is a palindrome</label>
+                <input type="checkbox" name="palindrome" id="palindrome">
+            </div>
+            <div>
+                <label for="most-popular-word">Find the word with largest number of occurences</label>
+                <input type="checkbox" name="mostPopularWord" id="most-popular-word">
+            </div>
+            <button type="submit">Check statistics</button>
+        </form>
+    </body>
+</html>
